@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20170530044618) do
     t.string   "title"
     t.datetime "published"
     t.text     "content",    limit: 65535
+    t.string   "image_url"
     t.string   "url"
     t.string   "author"
     t.integer  "feed_id"
