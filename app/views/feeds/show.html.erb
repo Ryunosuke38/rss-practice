@@ -1,19 +1,7 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @feed.name %>
-</p>
-
-<p>
-  <strong>Url:</strong>
-  <%= @feed.url %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @feed.description %>
-</p>
-
-<%= link_to 'Edit', edit_feed_path(@feed) %> |
-<%= link_to 'Back', feeds_path %>
+<div class="container">
+  <h3><%= link_to @entry.title, @entry.url %></h3>
+  <i>published on <%= @entry.published %> by <%= @entry.author %></i>
+  <p>
+    <%= @entry.content.html_safe %>
+  </p>
+</div>
