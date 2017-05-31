@@ -4,6 +4,7 @@ class CreateEntries < ActiveRecord::Migration[5.0]
       t.string :title
       t.datetime :published
       t.text :content
+      t.string :image_url
       t.string :url
       t.string :author
       t.integer :feed_id
