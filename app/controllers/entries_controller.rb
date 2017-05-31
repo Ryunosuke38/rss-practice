@@ -2,7 +2,7 @@ class EntriesController < ApplicationController
   before_action :set_feed, only: :index
 
   def index
-    @entries = @feed.entries.order('published desc')
+    @entries = Entry.all.order('published desc')
   end
 
   def show
@@ -11,6 +11,6 @@ class EntriesController < ApplicationController
 
   private
   def set_feed
-    @feed = Feed.find(params[:id])
+    @feed = Feed.find(1)
   end
 end
